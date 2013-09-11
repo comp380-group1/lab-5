@@ -2,7 +2,10 @@ package com.example.lab_5;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
@@ -17,6 +20,14 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	public void button1_onClick(View view) {
+		Intent intent = new Intent(this, DisplayMessageActivity.class);
+		EditText editText1 = (EditText) findViewById(R.id.editText1);
+		String message = editText1.getText().toString();
+		intent.putExtra("MESSAGE", message);
+		startActivity(intent);
 	}
 
 }
