@@ -31,4 +31,15 @@
         android:onClick="button1_onClick"
         android:text="@string/click_here" />
 
+    <Button
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:onClick="button2_onClick"
+        android:text="Button" />
+
 </RelativeLayout>
